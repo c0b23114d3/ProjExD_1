@@ -29,15 +29,20 @@ def main():
         screen.blit(bg_img2, [-img_x + 4800, 0])
 
         key_lst = pg.key.get_pressed()
+
+        #こうかとんの移動距離を保存する変数dx, dy
+        dx = -1; dy = 0
         if key_lst[pg.K_UP]:
-            kkrect.move_ip((0, -1))
+            dy = -1
         if key_lst[pg.K_DOWN]:
-            kkrect.move_ip((0, +1))
+            dy = 1
         if key_lst[pg.K_LEFT]:
-            kkrect.move_ip((-1, 0))
+            dx = -1
         if key_lst[pg.K_RIGHT]:
-            kkrect.move_ip((+1, 0))
-            tmr += 1
+            dx = 1
+
+        kkrect.move_ip((dx, dy))
+            
         screen.blit(koukaton, kkrect.center)
 
         pg.display.update()
