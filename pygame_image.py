@@ -13,15 +13,16 @@ def main():
     koukaton = pg.image.load("fig/3.png")
     koukaton = pg.transform.flip(koukaton, True, False)
     tmr = 0
+    img_x = tmr % 800
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
 
-        screen.blit(bg_img, [0, 0])
-        screen.blit(koukaton, [0, 0])
+        screen.blit(bg_img, [-img_x, 0])
+        screen.blit(koukaton, [300, 200])
         pg.display.update()
         tmr += 1        
-        clock.tick(10)
+        clock.tick(200)
 
 
 if __name__ == "__main__":
