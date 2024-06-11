@@ -39,7 +39,7 @@ def main():
         if key_lst[pg.K_LEFT]:
             dx = -2
         if key_lst[pg.K_RIGHT]:
-            dx = 1
+            dx = 2
 
         kkrect.move_ip((dx, dy))
             
