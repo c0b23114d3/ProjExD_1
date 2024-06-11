@@ -37,8 +37,9 @@ def main():
             kkrect.move_ip((-1, 0))
         if key_lst[pg.K_RIGHT]:
             kkrect.move_ip((+1, 0))
+            tmr += 1
         screen.blit(koukaton, kkrect.center)
-        
+
         pg.display.update()
         tmr += 1        
         clock.tick(200)
