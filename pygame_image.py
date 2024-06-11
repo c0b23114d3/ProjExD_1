@@ -37,7 +37,7 @@ def main():
         if key_lst[pg.K_DOWN]:
             dy = 1
         if key_lst[pg.K_LEFT]:
-            dx = -1
+            dx = -2
         if key_lst[pg.K_RIGHT]:
             dx = 1
 
